@@ -35,7 +35,7 @@ The following query retrieves all the orders for which the total price is less t
 The following query retrieves all customers who have at least one unpaid order:
 
 ```java {linenos=false}
-//Sales.Customer[Sales.Customer_Order/Sales.Order/HasPayed = false()]
+//Sales.Customer[Sales.Customer_Order/Sales.Order/HasPaid = false()]
 ```
 
 The following query retrieves all customers with an order that has a status different from `Delivered`.
