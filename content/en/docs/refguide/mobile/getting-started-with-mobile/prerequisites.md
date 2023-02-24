@@ -49,7 +49,21 @@ We recommend keeping the **Runtime port** in your [configuration](/refguide/conf
 
 If you are using Windows, make sure your WiFi network is set to **Private**. Windows often sets WiFi to **Public** by default, which blocks incoming connections.
 
-#### 3.1.3 Error: Unable to Load Script {#unable-load-script}
+#### 3.1.3 Firewall settings
+
+If you still get "something went wrong" after fixing your port issues and wifi network settings, you may need to add a port rule to your firewall.
+
+1. Open **Firewall & Network Protection** settings in Windows.
+1. Go to **Advanced Settings**.
+1. Right-click **Inbound Rules** and select **New rule**.
+1. Select **Port** as the rule type and click **Next**.
+1. Make sure **TCP** is selected.
+1. Enter **8080, 8083** in the **Specific local ports** field.
+1. Click **Next**. Make sure **Allow the connection" is selected and click **Next** again.
+1. Make sure only **Private** is selected and click **Next**.
+1. Enter a name and/or description for your rule and click **Finish**.
+    
+#### 3.1.4 Error: Unable to Load Script {#unable-load-script}
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
@@ -77,11 +91,11 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
-#### 3.1.4 Error: Unable to Detect Studio Pro
+#### 3.1.5 Error: Unable to Detect Studio Pro
 
 If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
 
-#### 3.1.5 Strict Company Policies Prevent Your Connection
+#### 3.1.6 Strict Company Policies Prevent Your Connection
 
 If your company has strict network policies which do not allow you to open the ports Mendix requires, here are 3 alternate approaches you can try:
 
